@@ -1,7 +1,9 @@
 {
   "name": "modulesapp",
   "version": "1.0.0",
-  "devDependencies": {
-    "jasmine-node": "^3.0.0"
+  "scripts": {
+      "start": "node app.js",
+      "dev": "node app.js Tom 26"
   }
 }
+
