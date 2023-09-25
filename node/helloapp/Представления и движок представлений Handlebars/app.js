@@ -17,7 +17,7 @@ const app = express();
 app.set('view engine', 'hbs');
 
 app.use('/contact', function (request, response) {
-    response.render('contact.hbs', {
+    response.render(__dirname + '/views/contact.hbs', {
         title: 'Мои контакты',
         emailsVisible: true,
         emails: ['gavgav@mycorp.com', 'mioaw@mycorp.com'],

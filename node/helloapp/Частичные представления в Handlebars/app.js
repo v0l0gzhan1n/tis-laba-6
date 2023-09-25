@@ -4,9 +4,9 @@ const app = express();
 
 app.set('view engine', 'hbs');
 hbs.registerPartials(__dirname + '/views/partials');
-
+console.log(__dirname + '/views/partials')
 app.use('/contact', function (request, response) {
-    response.render('contact', {
+    response.render(__dirname + '/views/contact.hbs', {
         title: 'Мои контакты',
         emailsVisible: true,
         emails: ['gavgav@mycorp.com', 'mioaw@mycorp.com'],
@@ -15,6 +15,7 @@ app.use('/contact', function (request, response) {
 });
 
 app.use('/', function (request, response) {
-    response.render('/home.hbs');
+    response.render(__dirname + '/views/home.hbs');
 });
+
 app.listen(3000);
